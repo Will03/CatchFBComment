@@ -13,8 +13,7 @@ Capybara.current_driver = :poltergeist
 Capybara.register_driver :poltergeist do |app|
 Capybara::Poltergeist::Driver.new(app, options)
 end
-url = "https://www.facebook.com/photo.php?fbid=800354686734792&set=a.115397395230528.11967.100002808039941&type=3&theater"
-#url = ARGV[0]
+url = ARGV[0]
 puts url
 visit(url)
 opencommnet = find('div._3399._1f6t div._524d span._2u_j:first-child')
